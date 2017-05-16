@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="br.android.cericatto.IoExtended.image_binding.WeatherData" />
+        <variable
+            name="data"
+            type="WeatherData" />
+        <variable
+            name="weather"
+            type="br.android.cericatto.IoExtended.image_binding.Weather" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@{weather}"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:scaleType="centerCrop"
+            android:src="@{weather.url}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/black_transparent_70"
+            android:padding="10dp"
+            android:text="@{WeatherData.capitalize(weather.cityName)}"
+            android:textColor="@color/color_white"
+            android:textSize="28sp" />
+    </FrameLayout>
+</layout>

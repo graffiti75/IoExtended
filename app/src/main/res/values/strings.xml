@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">IoExtended</string>
+
+    <string name="type_text">Type some text</string>
+    <string name="click_here">Click Here</string>
+</resources>
